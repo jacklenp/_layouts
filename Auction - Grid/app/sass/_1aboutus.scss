@@ -1,0 +1,112 @@
+.aboutus {
+  &__head {
+    margin-bottom: 40px;
+  }
+  &-wrap {
+    background-image: url(../img/aboutus.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 70px;
+  }
+
+  &-box {
+    display: grid;
+    max-width: 1285px;
+    grid-template-columns: 775px 510px;
+    grid-template-rows: 430px 1fr;
+    background-color: #ffffff;
+    border: 1px solid #c7c7c7;
+    grid-template-areas: "cont list"
+                         "cont order";
+    //font-size: 20px;
+    font-family: Gilroy-regular-auction;
+  }
+
+  &-content {
+    grid-area: cont;
+    border: 1px solid #c7c7c7;
+    padding: 45px 100px;
+    //min-width: 605px;
+    display: flex;
+    justify-content: center;
+
+
+    h6 {
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 20px;
+      font-family: Gilroy-regular-auction;
+      margin-bottom: 20px;
+    }
+  }
+
+  &-list {
+    grid-area: list;
+    border: 1px solid #c7c7c7;
+    padding: 45px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+
+    h6 {
+      margin-bottom: 15px;
+    }
+    li {
+      font-size: 20px;
+      padding: 6px 40px;
+      position: relative;
+      //&:nth-child(odd), &:nth-child(even) {
+      //  position: relative;
+      //  background-image: url(../img/list.png);
+      //  background-repeat: no-repeat;
+      //
+      //  //top: 10px;
+      //  //width: 24px;
+      //  //height: 24px;
+      //
+      //}
+      &:before {
+        content: "";
+        position: absolute;
+        background-image: url(../img/list.png);
+        background-repeat: no-repeat;
+
+        top: 10px;
+        left: 0;
+        width: 24px;
+        height: 24px;
+
+      }
+    }
+
+
+  }
+  &-order {
+    grid-area: order;
+    border: 1px solid #c7c7c7;
+    font-size: 20px;
+    padding: 45px;
+    width: 100%;
+    display: flex;
+    //flex-wrap: wrap;
+    flex-direction: column;
+    //justify-content: center;
+    p {
+      margin-bottom: 15px;
+      &:nth-child(1) {
+        font-weight: 700;
+
+      }
+    }
+  }
+
+
+}/*END*/

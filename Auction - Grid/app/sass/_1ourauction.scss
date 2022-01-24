@@ -1,0 +1,176 @@
+.ourauction {
+  background-color: #fafafa;
+  border-top: 1px solid #c7c7c7;
+  border-bottom: 1px solid #c7c7c7;
+  padding-bottomxcw: 40px;
+  /*THE HEAD OF SLIDER*/
+  &__head {
+    margin-top: 40px;
+    font-family: Gilroy-bold-auction;
+    text-align: center;
+  }
+  &__box-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom:  70px;
+  }
+  &__btn {
+    margin: 15px;
+  }
+
+/*SLIDER */
+  &__slider-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr 320px 320px;
+    //grid-template-columns: 1fr 1fr 300px 300px;
+    grid-template-rows: 480px 200px;
+    border: 1px solid #000;
+    grid-template-areas: "sl-img sl-img sl-text sl-text"
+                         "sl-img sl-img sl-left sl-right";
+  }
+  .ourauction-box {
+    border: 1px solid #c7c7c7;
+  }
+
+  &__slider-image {
+    grid-area: sl-img;
+    background-image: url("../img/auction1.png");
+    background-position:  center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    //grid-column: 1/ 2;
+    //grid-row: 1/3;
+    border: 1px solid #c7c7c7;
+    //height: 100%;
+  }
+  &__slider-image-2 {
+    grid-area: sl-img;
+    background-image: url("../img/auction2.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:  center;
+  }
+
+  &__slider-text {
+    grid-area: sl-text;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Gilroy-bold-auction;
+    &  h3 {
+      font-size: $fz-h5;
+      margin-bottom: 20px;
+    }
+  }
+  &__slider-btn {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+    & button {
+      margin: 10px;
+    }
+  }
+  &__slider-left {
+    grid-area: sl-left;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &-wrap {
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: row;
+      align-items: center;
+    }
+    &-icondata {
+      //background-image: url("../img/");
+      width: 45px!important;
+      height: 40px;
+      margin-right: 15px;
+    }
+
+  }
+  &__slider-right {
+    grid-area: sl-right;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+
+  }
+
+.ourauction__slider {
+  width: 100%;
+  overflow: hidden;
+}
+  .owl-carousel {
+    width: 170%;
+  }
+
+  /*SLIDER kastuli */
+  //<span aria-label="Next">›</span>
+  .owl-dots {
+    position: relative;
+    width: 60%;
+  }
+
+
+  div.owl-nav > button.owl-prev > span {
+    font-size: 120px;
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    left: 2%;
+    color: #fff;
+    opacity: 0.3;
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  div.owl-nav > button.owl-next > span {
+    font-size: 120px;
+    position: absolute;
+    top: 45%;
+    transform: translate(-25%, -50%);
+    //transform: translateX(-50%);
+    right: 49%;
+    color: #000;
+    opacity: 0.3;
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+
+  .owl-theme .owl-dots .owl-dot span {
+    width: 15px;
+    height: 15px;
+    margin: 10px 10px;
+    background: #000;
+    display: block;
+    transition: opacity .2s ease;
+    border-radius: 50px;
+  }
+
+  .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+    background: #fafafa;
+    border: 3px solid #000;
+    width: 20px;
+    height: 20px;
+    transform: translateY(3px);
+  }
+
+  div.owl-dots > button.owl-dot.active:hover > span {
+    background: #fafafa;
+    border: 3px solid #868686;
+    width: 20px;
+    height: 20px;
+    transform: translateY(3px);
+  }
+
+  }/*END ourauction*/

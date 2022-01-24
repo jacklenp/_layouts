@@ -1,0 +1,28 @@
+//////////footer///////////////////////////////////////
+.footer {
+  background-image: url(../img/bg-footer.png);
+  &__line {
+    background-image: url(../img/bg-thin-1.png);
+    height: 5px;
+  }
+  &__wrap {
+    display: block;
+  }
+  &__block {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    padding: 20px 0 30px;
+
+  }
+  &__left {
+    //float: left;
+  }
+  &__right {
+    //float: right;
+  }
+
+  .row-mar-bot-0 {
+    margin-bottom: -20px;
+  }
+}

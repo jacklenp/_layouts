@@ -1,0 +1,210 @@
+.home {
+  min-width: 320px;
+  .wrapper {
+    display: grid;
+    position: relative;
+    grid-template-areas:  "logo nav nav nav"
+                          "logo body body img"
+                          "logo b_left b_right img";
+    grid-template-columns: minmax(300px, 1fr) 350px 350px 3fr;
+    grid-template-rows:  90px 630px 230px;
+    //grid-auto-rows: minmax(50px, auto);
+    border: 1px solid #000;
+    width: 100%;
+
+  }
+  .box {
+    border: 1px solid #000;
+  }
+  .box-1 {
+    grid-area: logo;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    font-family: Gilroy-light-auction;
+    .head-aside-title {
+      text-align: center;
+    }
+  }
+  .box-2 {
+    grid-area: nav;
+    font-family: Gilroy-medium-auction;
+    font-size: 20px;
+    .nav-wrap {
+      display: flex;
+      //flex-direction: row;
+    }
+    nav {
+      margin-left: 60px;
+    }
+    nav li {
+      cursor: pointer;
+      padding: 33px 10px;
+      margin-right: 30px;
+      //&:nth-child(odd){
+      //  background-color: #ffff00;
+      //}&:nth-child(even){
+      //  background-color: #f00;
+      //}
+      &:hover {
+        color: #c7c7c7;
+      }
+    }
+    .nav-wrap li {
+      position: relative;
+    }
+    .nav-wrap li.current, .nav-wrap li:hover{color: #7c7c7c;}
+    .nav-wrap li:before,
+    .nav-wrap li:after {
+      content: "";
+      position: absolute;
+      height: 3px;
+      top: 65%;
+      right: 100%;
+      bottom: 0px;
+      left: 0;
+      background: #7c7c7c;
+      transition: .3s;
+    }
+    //.nav-wrap a:hover:before, .nav-wrap .current:before {left: 0;}
+    .nav-wrap li:hover:after, .nav-wrap .current:after {right: 0;}
+  }
+  .box-3 {
+    position: relative;
+    grid-area: body;
+    font-family: Gilroy-bold-auction;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &-wrap {
+      padding: 40px;
+      position: relative;
+      transform: translateX(0);
+    }
+    &-title {
+      margin-bottom: 20px;
+    }
+    &-place {
+      display: flex;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      font-size: $text-p4;
+    }
+    &-location {
+      display: flex;
+      align-items: center;
+      font-family: Gilroy-bold-auction;
+      margin-right: 40px;
+      img {
+        width: 40px;
+        height: 40px;
+        margin-right: 15px;
+      }
+    }
+    &-time {
+      font-family: Gilroy-medium-auction;
+    }
+    &-text {
+      max-width: 430px;
+      margin-bottom: 30px;
+      font-family: Gilroy-regular-auction;
+    }
+    &-btn {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      button:first-child {
+        margin-bottom: 10px;
+
+        margin-right: 15px;
+      }
+    }
+  }
+  .box-4 {
+    grid-area: b_left;
+    text-align: center;
+    padding: 40px  20px;
+    display: flex;
+    justify-content: center;
+    &__title {
+      display: inline-block;
+      text-align: left;
+      margin: auto;
+      margin-bottom: 15px;
+    }
+  }
+  .box-5 {
+    grid-area: b_right;
+    text-align: center;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+  }
+  .box-6 {
+    grid-area: img;
+    min-width: 250px;
+    //background-color: deeppink;
+    background-image: url(../img/header-bg.png);
+    background-position:  center bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+.header-wrap {
+  //position: relative;
+  display: none;
+  &__button{
+    display: block;
+    float:right;
+    position: relative;
+    right: 15px;
+    top: 23px;
+    text-align: center;
+    line-height: 48px;
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+    z-index: 11;
+  }
+
+  &__button span:after, &__button span:before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -9px;
+  }
+  &__button span:after{
+    top: 9px;
+  }
+  &__button span{
+    position: relative;
+    display: block;
+  }
+  &__button span,  &__button span:after, &__button span:before {
+    width: 100%;
+    height: 2px;
+    background-color: #313030;
+    transition: all 0.3s;
+    backface-visibility: hidden;
+    border-radius: 2px;
+  }
+
+  &__button.on span  {
+    background-color: transparent;
+  }
+  &__button.on span:before {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  &__button.on span:after {
+    transform: rotate(-45deg) translate(7px, -8px);
+  }
+  &__button span.on + #menu {
+    opacity: 1;
+    visibility: visible;
+  }
+}

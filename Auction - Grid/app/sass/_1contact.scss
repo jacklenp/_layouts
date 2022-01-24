@@ -1,0 +1,154 @@
+.contact {
+     min-width: 320px;
+     &__wrapper {
+       display: grid;
+       grid-template-columns: minmax(175px, 320px) minmax(150px, 330px) minmax(150px, 330px) 2fr;
+       grid-template-rows:  140px minmax(100px, 170px) minmax(100px, 170px) minmax(100px, 170px) minmax(250px, auto);
+       grid-auto-rows: minmax(50px, auto);
+       grid-template-areas: "logo head head head"
+       "logo body body img"
+       "logo body body img"
+       "logo body body img"
+       "logo bleft bright img";
+       border: 1px solid #c7c7c7;
+       height: auto;
+       margin: 0 auto;
+       box-sizing: padding-box;
+     }
+  &__box-1 {
+    grid-area: logo;
+    border: 1px solid #c7c7c7;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+
+  }
+  &__box-2 {
+    grid-area: head;
+    border: 1px solid #c7c7c7;
+    border-left: 1px solid transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+  &__box-3 {
+    grid-area: body;
+    border: 1px solid #c7c7c7;
+
+    }
+  &__box-4 {
+    grid-area: bleft;
+    border: 1px solid #c7c7c7;
+    }
+  &__box-5 {
+    grid-area: bright;
+    border: 1px solid #c7c7c7;
+    }
+  &__box-6 {
+    grid-area: img;
+    border: 1px solid #c7c7c7;
+    background-image: url(../img/contact.png);
+    background-position:  center bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    }
+
+  /* CONTACT ASIDE  */
+&-aside-title {
+  text-align: center;
+  padding-bottom: 40px;
+}
+  &-aside-social {
+    text-align: center;
+
+  }
+  /* HEADER BODY  */
+  &__box-3 {
+    position: relative;
+
+    &-wrap {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      //padding-left: 120px;
+    }
+    &-title {
+      margin-bottom: 30px;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+    &-place {
+      margin-bottom: 45px;
+      &:nth-child(3) { /*Растояние между Р и кнопкой*/
+        margin-bottom: 20px;
+      }
+      &-data {
+        p:nth-child(1) {
+          margin-bottom: 20px;
+        }
+      }
+      &-icon, &-data {
+        display: flex;
+        margin: 20px 0;
+        img {
+          padding-right: 20px;
+          width: 70px;
+          height: 50px;
+        }
+      }
+    }
+    &-text {
+      //max-width: 430px;
+      //margin-bottom: 30px;
+    }
+    &-btn {
+      //display: flex;
+      .button {
+        margin-right: 20px;
+        &:last-child {
+          margin-right: 0;
+
+        }
+      }
+    }
+  }
+
+  /* HEADER UNDER BODY BUTTON-BLOCK  */
+  &__box-4, &__box-5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  &__head {
+    margin-bottom: 15px;
+  }
+
+
+  .title-btn {
+    //font-size: $fz-h6;
+    //padding: 30px 100px;
+    //padding: 30px 50px 30px;
+    span {
+      //font-size: $fz-h3;
+    }
+  }
+  &__box-5 {
+    //width: 32vw;
+
+  }
+  &__head-title {
+
+  }
+  &__social, &__mail {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+}

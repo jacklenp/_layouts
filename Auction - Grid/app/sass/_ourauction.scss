@@ -1,0 +1,223 @@
+.ourauction {
+  background-color: #fafafa;
+  border-top: 1px solid #c7c7c7;
+  border-bottom: 1px solid #c7c7c7;
+  padding-bottomxcw: 40px;
+
+  //height: 100vh;
+  &__head {
+    text-align: center;
+    padding-top: 75px;
+  }
+  &__box-wrap {
+    display: flex;
+    justify-content: center;
+    margin: 35px 0;
+  }
+  &__btn {
+    margin: 15px;
+  }
+
+  /*SLIDER */
+  &__slider-wrap {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 2fr 1fr;
+    //border: 1px solid #000;
+    //text-align: center;
+    //align-content: center;
+  }
+  .ourauction-box {
+    border: 1px solid #c7c7c7;
+  }
+  /* BOX IMG */
+  &__slider-image {
+    background-image: url("../img/auction1.png");
+    background-position:  center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    grid-column: 1/ 2;
+    grid-row: 1/3;
+    border: 1px solid #c7c7c7;
+    //height: 100%;
+  }
+  &__slider-image-2 {
+    background-image: url("../img/auction2.png");
+  }
+  /* BOX TEXT */
+  &__slider-text {
+    grid-column: 2/ 4;
+    grid-row: 1/2;
+    padding: 150px 85px;
+    display: flex;
+    justify-content: flex-end;
+    //flex-direction: column;
+    position: relative;
+  }
+  &__slider-text-box {
+
+    background-color: #ffff00;
+    //height: 500px;
+    //width: 100%;
+
+  }
+  &__title-btn {
+    padding: 25px 0;
+  }
+  &__slider-btn {
+    //display: flex;
+    //flex-wrap: wrap;
+    & > .button {
+      margin-right: 30px;
+      margin-bottom: 15px;
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+
+  /* BOX LEFT - DATE */
+  &__slider-left {
+    display: flex;
+    justify-content: center;
+
+    position: relative;
+    grid-column: 2/ 3;
+    grid-row: 2/3;
+    //text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    p {
+      position: relative;
+      //top: -50%;
+      transform: translateY(50%);
+    }
+  }
+  /* BOX RIGHT - LOCATION */
+  &__slider-right {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    grid-column: 3/ 4;
+    grid-row: 2/3;
+    //text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    p {
+      position: relative;
+      top: -10%;
+      transform: translateY(50%);
+    }
+  }
+
+}
+/*SLIDER kastuli */
+//<span aria-label="Next">›</span>
+
+div.owl-nav > button.owl-prev > span {
+  font-size: 120px;
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  left: 2%;
+  color: #fff;
+  opacity: 0.3;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+div.owl-nav > button.owl-next > span {
+  font-size: 120px;
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  right: 10%;
+  color: #000;
+  opacity: 0.3;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+div.owl-dots:checked > button:nth-child(1),
+div.owl-dots:checked > button:nth-child(2),
+div.owl-dots:checked > button:nth-child(3),
+div.owl-dots:checked > button:nth-child(4) {
+  //border: 2px solid #000;
+  //border-radius: 50%;
+}
+
+
+
+.owl-theme .owl-dots .owl-dot span {
+  width: 15px;
+  height: 15px;
+  margin: 10px 10px;
+  background: #000;
+  display: block;
+  transition: opacity .2s ease;
+  border-radius: 50px;
+}
+
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+  background: #fafafa;
+  border: 3px solid #000;
+  width: 20px;
+  height: 20px;
+  transform: translateY(3px);
+}
+
+div.owl-dots > button.owl-dot.active:hover > span {
+  background: #fafafa;
+  border: 3px solid #868686;
+  width: 20px;
+  height: 20px;
+  transform: translateY(3px);
+
+div.owl-dots > button.owl-dot.active > span {
+  //background-color: #fff;
+}
+
+
+  //width: 23px;
+  //height: 23px;
+  //padding: 12px;
+}
+
+
+.ourauction__slider .owl-carousel .owl-stage-outer .owl-stage {
+  position: relative;
+  //margin-right: 150px;
+  //padding-right: 350px;
+  //margin-right: 200px;
+  transform: translateX(-25%);
+  right: 14%;
+}
+.item {
+  //background-color: #0f9d58;
+  //padding: 110px;
+  //margin: 5px;
+
+}
+
+
+.owl-carousel .owl-stage {
+  //position: relative;
+  //-ms-touch-action: pan-Y;
+  //touch-action: manipulation;
+  //-moz-backface-visibility: hidden;
+}
+
+
+.owl-carousel .owl-stage {
+  //transform: translate3d(-3686px, 0px, 0px);
+  //transition: all 0s ease 0s;
+  //width: 14823px;
+  //padding-left: 0;
+  //padding-right: 50px;
+}
+
+/*SLIDER kastuli  END*/
